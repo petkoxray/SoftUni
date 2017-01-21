@@ -1,6 +1,13 @@
 Final Version
 
+<<<<<<< HEAD
 
 
 
 edited from GitBash
+=======
+updated from Toirtoise git
+
+more changes made
+
+>>>>>>> 9a35a386ed730a7dd5634a2462aa70aeef0c183b
