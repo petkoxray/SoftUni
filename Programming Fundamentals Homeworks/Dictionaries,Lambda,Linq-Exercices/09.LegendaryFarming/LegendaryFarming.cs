@@ -7,8 +7,8 @@ class LegendaryFarming
     static void Main()
     {
         var items = new Dictionary<string,int>();
-        items.Add("shards", 0);
         items.Add("fragments", 0);
+        items.Add("shards", 0);
         items.Add("motes", 0);
         bool isFound = false;
 
@@ -25,7 +25,7 @@ class LegendaryFarming
 
     private static void PrintItems(Dictionary<string, int> items)
     {
-        var keyItems = items.Take(3).OrderByDescending(item => item.Value);
+        var keyItems = items.Take(3).OrderByDescending(item => item.Value).ThenBy(item => item.Key);
         var junkItems = items.Skip(3).OrderBy(item => item.Key);
         foreach (var item in keyItems)
         {
