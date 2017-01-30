@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-class Program
+class EqualSums
 {
     static void Main()
     {
@@ -35,7 +35,7 @@ class Program
         }
     }
 
-    private static int GetRighSum(int[] numbers, int i)
+    public static int GetRighSum(int[] numbers, int i)
     {
         int rightSum = 0;
         for (int j = i + 1; j < numbers.Length; j++)
@@ -46,7 +46,7 @@ class Program
         return rightSum;
     }
 
-    private static int GetLeftSum(int [] numbers,int i)
+    public static int GetLeftSum(int [] numbers,int i)
     {
         int leftSum = 0;
         for (int j = i - 1; j >= 0; j--)

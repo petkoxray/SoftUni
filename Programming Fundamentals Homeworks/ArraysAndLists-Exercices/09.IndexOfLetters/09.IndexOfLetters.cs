@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Program
+class IndexOfLetters
 {
     static void Main()
     {
@@ -22,7 +22,7 @@ class Program
 
     }
 
-    private static char[] CreateArrayOfLetters(char[] arrayOfLetters)
+    public static char[] CreateArrayOfLetters(char[] arrayOfLetters)
     {
         char currentLetter = 'a';
         for (int i = 0; i < arrayOfLetters.Length; i++)

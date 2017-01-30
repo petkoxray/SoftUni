@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-class Program
+class RotateAndSum
 {
-    static void Main(string[] args)
+    static void Main()
     {
         var numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
         int rotations = int.Parse(Console.ReadLine());

@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Program
+class LargestCommonEnd
 {
     static void Main()
     {

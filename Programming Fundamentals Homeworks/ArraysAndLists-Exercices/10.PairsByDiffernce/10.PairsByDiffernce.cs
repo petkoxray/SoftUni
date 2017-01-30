@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-class Program
+class PairsByDiffernce
 {
-    static void Main(string[] args)
+    static void Main()
     {
         var numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
         int differnce = int.Parse(Console.ReadLine());

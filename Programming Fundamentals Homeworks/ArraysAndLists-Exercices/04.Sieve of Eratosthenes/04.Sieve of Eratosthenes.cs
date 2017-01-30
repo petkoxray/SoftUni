@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Program
+class SieveOf
 {
     static void Main(string[] args)
     {
