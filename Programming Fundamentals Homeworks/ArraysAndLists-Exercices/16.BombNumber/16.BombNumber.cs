@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-class Program
+class BombNumer
 {
     static void Main()
     {

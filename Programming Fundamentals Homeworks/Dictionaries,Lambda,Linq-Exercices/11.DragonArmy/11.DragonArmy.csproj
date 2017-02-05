@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB76D766-1D96-4779-B0CB-F040384D5C6E}</ProjectGuid>
+    <ProjectGuid>{FB447B17-394C-49DB-B3B6-3AB5B798484E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04.FixEmails</RootNamespace>
-    <AssemblyName>04.FixEmails</AssemblyName>
+    <RootNamespace>_11.DragonArmy</RootNamespace>
+    <AssemblyName>11.DragonArmy</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FixEmails.cs" />
+    <Compile Include="DragonArmy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

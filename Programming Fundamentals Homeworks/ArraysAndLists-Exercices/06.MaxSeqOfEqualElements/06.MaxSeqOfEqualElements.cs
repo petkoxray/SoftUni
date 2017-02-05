@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 class MaxSequence
 {
-    static void Main(string[] args)
+    static void Main()
     {
         var numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
 

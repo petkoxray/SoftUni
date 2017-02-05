@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB76D766-1D96-4779-B0CB-F040384D5C6E}</ProjectGuid>
+    <ProjectGuid>{20A88969-CF9D-4226-81DA-5965D17DEABF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04.FixEmails</RootNamespace>
-    <AssemblyName>04.FixEmails</AssemblyName>
+    <RootNamespace>_14.UserYourChainsBuddy</RootNamespace>
+    <AssemblyName>14.UserYourChainsBuddy</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FixEmails.cs" />
+    <Compile Include="UseYourChainsBuddy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,8 @@
 ﻿using System;
 
-class Program
+public class SumReversedNumber
 {
-    static void Main(string[] args)
+    static void Main()
     {
         var numbers = Console.ReadLine().Split();
 
@@ -17,7 +17,7 @@ class Program
         Console.WriteLine(sum);
     }
 
-    private static int GetReversedNumber(string currentNum)
+    public static int GetReversedNumber(string currentNum)
     {
         string reversedNumStr = "";
 
