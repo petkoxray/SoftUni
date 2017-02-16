@@ -1,34 +1,22 @@
 ﻿using System;
-using System.Linq;
 using System.Numerics;
 
-class Convert
+class BaseNtoTen
 {
     static void Main()
     {
-        var input = Console.ReadLine().Split().Select(BigInteger.Parse).ToArray();
-        var n = (int)input[0];
-        var number = input[1];
-        BigInteger rem = 0;
-        var result = "";
+        var input = Console.ReadLine().Trim().Split();
+        var baseNNum = int.Parse(input[0]);
+        var baseTenNum = input[1].ToCharArray();
 
-        if (n >= 2 && n <= 10)
+        var result = new BigInteger(0);
+
+        for (int i = 0; i < baseTenNum.Length; i++)
         {
-            while (number > 0)
-            {
-                rem = number % n;
-                number =number / n;
-
-                result = rem.ToString() + result;
-            }
-
-            Console.WriteLine(result);
+            var currentNum = (int)Char.GetNumericValue(baseTenNum[i]);
+            result += currentNum * BigInteger.Pow(baseNNum, baseTenNum.Length - i - 1);
         }
 
-        else
-        {
-            Console.WriteLine(0);
-        }
+        Console.WriteLine(result);
     }
 }
-
