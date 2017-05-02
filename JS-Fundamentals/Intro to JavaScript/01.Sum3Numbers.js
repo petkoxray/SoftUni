@@ -5,3 +5,5 @@ function sum(input) {
 
     return firstNum + secondNum + thirdNum;
 }
+
+console.log(sum([5,6,7]));
