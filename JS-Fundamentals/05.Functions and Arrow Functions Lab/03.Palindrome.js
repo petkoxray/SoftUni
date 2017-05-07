@@ -1,3 +1,3 @@
 function solve([input]) {
-    return input == input.split('').reverse().join('')
+    return input == input.split('').reverse().join('');
 }

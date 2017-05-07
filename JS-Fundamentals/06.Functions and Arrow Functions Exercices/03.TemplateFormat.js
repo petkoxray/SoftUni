@@ -11,10 +11,10 @@ function solve(array) {
 
     function make(question, answer) {
         html += `  <question>\n`;
-        html += `    ${question}\n`
+        html += `    ${question}\n`;
         html += `  </question>\n`;
         html += `  <answer>\n`;
-        html += `    ${answer}\n`
+        html += `    ${answer}\n`;
         html += `  </answer>\n`;
     }
 }

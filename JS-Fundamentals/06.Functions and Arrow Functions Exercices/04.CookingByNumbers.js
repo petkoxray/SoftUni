@@ -9,15 +9,15 @@ function solve(array) {
     function cook(number, operation) {
         switch (operation) {
             case 'chop':
-                return number = number / 2;
+                return  number / 2;
             case 'spice':
                 return ++number;
             case 'bake':
-                return number = number * 3;
+                return  number * 3;
             case 'fillet':
-                return number = number * 0.80;
+                return  number * 0.80;
             case 'dice':
-                return number = Math.sqrt(number);
+                return  Math.sqrt(number);
             default:
                 break;
         }
