@@ -7,7 +7,7 @@
 *.userosscache
 *.sln.docstates
 .vscode
-.jshintrc
+*.jshintrc
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
