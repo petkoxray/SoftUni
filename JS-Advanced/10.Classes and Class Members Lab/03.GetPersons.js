@@ -1,0 +1,25 @@
+function solve() {
+    class Person {
+        constructor(firstName, lastName, age, email) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.email = email;
+        }
+
+        toString(){
+            console.log(`${this.firstName} ${this.lastName} (age: ${this.age}, email: ${this.email})`);
+        }
+    }
+
+    let arr = [];
+    let p1 = new Person('Maria', 'Petrova', 22, 'mp@yahoo.com');
+    let p2 = new Person('SoftUni');
+    let p3 = new Person('Stephan', 'Nikolov', 25);
+    let p4 = new Person('Peter', 'Kolev', 24, 'ptr@gmail.com');
+
+    arr.push(p1, p2, p3, p4);
+    return arr;
+}
+
+solve();
