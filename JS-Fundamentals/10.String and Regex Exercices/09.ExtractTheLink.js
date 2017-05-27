@@ -6,7 +6,7 @@ function main(input) {
 
         while (match) {
             console.log(match[0]);
-            match = regex.exec(input[i]);
+            match = regex.exec(input[i]).log;
         }
     }
 }

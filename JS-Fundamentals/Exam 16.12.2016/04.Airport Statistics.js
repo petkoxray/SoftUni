@@ -119,6 +119,6 @@ function main2(input) {
     }
 
     function sortTowns(a, b) {
-        return b[1].arrivals - a[1].arrivals || a[0].localeCompare(b[0])
+        return b[1].arrivals - a[1].arrivals || a[0].localeCompare(b[0]);
     }
 }
