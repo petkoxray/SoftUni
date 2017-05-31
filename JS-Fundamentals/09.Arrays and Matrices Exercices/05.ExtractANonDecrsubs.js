@@ -1,16 +1,12 @@
 function solve(input) {
-    input = input.map(Number);
-    let result = []; biggestNum = input[0];
-    result.push(biggestNum);
+    let biggestNum = -Infinity;
 
-    for (let i = 1; i < input.length; i++) {
-        if (biggestNum < input[i]) {
-            result.push(input[i]);
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] >= biggestNum) {
+            console.log(input[i]);
             biggestNum = input[i];
-        }            
+        }
     }
-
-    console.log(result.join('\n'));
 }
 
 solve([1,

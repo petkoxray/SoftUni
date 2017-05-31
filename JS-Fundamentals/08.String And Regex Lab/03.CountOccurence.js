@@ -1,11 +1,9 @@
-function count(input) {
-    let target = input[0];
-    let text = input[1];
-    let index = -1;
+function count(word, text) {
     let count = 0;
+    let index = -1;
 
     while (true) {
-        index = text.indexOf(target, index);
+        index = text.indexOf(word,index);
         if (index !== -1) {
             count++;
             index++;
@@ -17,4 +15,4 @@ function count(input) {
     console.log(count);
 }
 
-count(['ma', 'Marine mammal training is the training and caring for marine life such as, dolphins, killer whales, sea lions, walruses, and other marine mammals. It is also a duty of the trainer to do mental and physical exercises to keep the animal healthy and happy.']);
+count('ma', 'Marine mammal training is the training and caring for marine life such as, dolphins, killer whales, sea lions, walruses, and other marine mammals. It is also a duty of the trainer to do mental and physical exercises to keep the animal healthy and happy.');

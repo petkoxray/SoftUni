@@ -1,5 +1,4 @@
-function extract(input) {
-    let text = input[0];
+function extract(text) {
     let result = [];
     let start = text.indexOf('(');
     let end = text.indexOf(')',start);
@@ -14,4 +13,5 @@ function extract(input) {
     console.log(result.join(', '));
 }
 
-extract(['Rakiya (Bulgarian brandy) is self-made liquor (alcoholic drink)']);
+extract('Rakiya (Bulgarian brandy) is self-made liquor (alcoholic drink)');
+

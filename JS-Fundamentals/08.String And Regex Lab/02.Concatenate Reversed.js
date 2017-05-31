@@ -5,4 +5,9 @@ function solve(input) {
     console.log(result.split('').reverse().join(''));
 }
 
-solve(['I', 'am', 'student']);
+main(['I', 'am', 'student']);
+
+function main(input) {
+    input = input.join('').split('').reverse().join('');
+    console.log(input);
+}
