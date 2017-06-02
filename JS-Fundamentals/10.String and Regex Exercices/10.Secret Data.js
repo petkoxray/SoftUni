@@ -1,8 +1,8 @@
 function main(input) {
-    let userNamePattern = /(\*[A-Z][A-Za-z]+)(?=\s|$)/g;
-    let phonePattern = /(\+[0-9-]{10})(?=\s|$)/g;
-    let idPattern = /(![0-9a-zA-Z]+)(?=\s|$)/g;
-    let basePattern = /(_[0-9a-zA-Z]+)(?=\s|$)/g;
+    let userNamePattern = /(\*[A-Z][A-Za-z]*)(?=\s|\t|$)/g;
+    let phonePattern = /(\+[0-9-]{10})(?=\s|\t|$)/g;
+    let idPattern = /(![0-9a-zA-Z]+)(?=\s|\t|$)/g;
+    let basePattern = /(_[0-9a-zA-Z]+)(?=\s|\t|$)/g;
     let result = [];
 
     for (let i = 0; i < input.length; i++) {
@@ -37,3 +37,29 @@ main([
     'This is all I saw, that night.',
     'I cannot explain it myself...'
 ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,16 +1,16 @@
 function main(input) {
-    let numbers = [];
-    let regex =/\d+/g;
+    let pattern = /[0-9]+/g;
+    let result = [];
 
-    for(let line of input) {
-        let match = regex.exec(line);
-        while(match) {
-            numbers.push(match[0]);
-            match = regex.exec(line);
+    for (let current of input) {
+        let match = pattern.exec(current);
+        while (match) {
+            result.push(match[0]);
+            match = pattern.exec(current);
         }
     }
 
-    console.log(numbers.join(" "));
+    console.log(result.join(' '));
 }
 
 

@@ -6,13 +6,20 @@ function solve(input) {
     }
 
     function sortNames(a, b) {
-        let sorted = a.length - b.length;
-        if (sorted === 0)
-            sorted = a.localeCompare(b);
-
-        return sorted;
+        return a.length - b.length || a.localeCompare(b);
     }
 
     let sortedNames = [...result].sort(sortNames);
-    console.log(sortedNames);
+    console.log(sortedNames.join('\n'));
 }
+
+// solve([
+//     "Ashton",
+//     "Kutcher",
+//     "Ariel",
+//     "Lilly",
+//     "Keyden",
+//     "Aizen",
+//     "Billy",
+//     "Braston",
+// ]);

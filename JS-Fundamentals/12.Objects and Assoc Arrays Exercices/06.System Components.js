@@ -1,33 +1,32 @@
 function solve(input) {
-    let result = new Map();
+    let systems = new Map();
+
     for (let i = 0; i < input.length; i++) {
-        let [system, component, subComponent] = input[i].split(/ \| /);
+        let [system, components, subComponents] = input[i].split(' | ');
 
-        if (!result.has(system))
-            result.set(system, new Map());
-        
-        if (!result.get(system).has(component))
-            result.get(system).set(component, []);
-
-        result.get(system).get(component).push(subComponent);
+        if (!systems.has(system))
+            systems.set(system, new Map());
+        if (!systems.get(system).has(components))
+            systems.get(system).set(components, []);
+        systems.get(system).get(components).push(subComponents);
     }
 
-    function orderSystem(a, b) {
-        let result = b[1].size - a[1].size;
-        if (result === 0)
-            result = a[0].localeCompare(b[0]);
-        return result;
-    }
+    let sortedSystems = [...systems.entries()].sort(sortSystems);
 
-    let resultArr = [...result].sort(orderSystem);
-    
-    for(let [system, components] of resultArr) {
-        console.log(system);
-        let orderedComponents = [...components].sort(orderSystem);
-        for(let [component, subComponents] of orderedComponents) {
-            console.log(`||${component}`);
-            subComponents.forEach(x => console.log(`||||${x}`));
+    for (let [name, components] of sortedSystems) {
+        console.log(name);
+        let sortedComponents = [...components].sort(sortComponents);
+        for (let [name, subcomponents] of sortedComponents) {
+            console.log('|||' + name);
+            subcomponents.forEach(s => console.log('||||||' + s));
         }
+    }
+
+    function sortSystems(a, b) {
+        return b[1].size - a[1].size || a[0].localeCompare(b[0]);
+    }
+    function sortComponents(a, b) {
+        return b[1].length - a[1].length;
     }
 }
 
@@ -46,3 +45,24 @@ solve([
 'Indice | Session | Default Storage',
 'Indice | Session | Default Security'
 ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

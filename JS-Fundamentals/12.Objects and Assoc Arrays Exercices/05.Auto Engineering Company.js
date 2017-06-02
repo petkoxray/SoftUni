@@ -1,24 +1,26 @@
 function solve(input) {
-    let result = new Map();
+    let cars = new Map();
 
     for (let i = 0; i < input.length; i++) {
-        let [brand, model, cars] = input[i].split(/ \| /);
-        cars = Number(cars);
+        let [brand, model, quantity] = input[i].split(' | ');
+        quantity = Number(quantity);
 
-        if (!result.has(brand)) 
-            result.set(brand, new Map());
+        if (!cars.has(brand)) {
+            cars.set(brand, new Map);
+        }
 
-        let oldCars = result.get(brand).get(model);
-        if (oldCars)
-            cars += oldCars;
-            
-        result.get(brand).set(model,cars);
+        if (!cars.get(brand).has(model)) {
+            cars.get(brand).set(model, 0);
+        }
+
+        let currenQuantity = cars.get(brand).get(model);
+        cars.get(brand).set(model, currenQuantity + quantity);
     }
 
-    for(let [brand, models] of result) {
+    for (let [brand, models] of cars) {
         console.log(brand);
-        for(let [model, price] of models) {
-            console.log(`###${model} -> ${price}`);
+        for (let [model, quantity] of models) {
+            console.log(`###${model} -> ${quantity}`);
         }
     }
 }
@@ -35,3 +37,20 @@ solve([
 'Citroen | C4 | 22',
 'Citroen | C5 | 10',
 ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

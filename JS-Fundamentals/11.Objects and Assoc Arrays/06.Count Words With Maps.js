@@ -1,16 +1,48 @@
-function solve(input) {
-    let data = input[0].split(/\W+/).filter(x => x !== '').map(x => x.toLowerCase());
+function solve([input]) {
+    let words = input.split(/\W+/)
+        .filter(x => x !== '')
+        .map(x => x.trim())
+        .map(x => x.toLowerCase());
+
     let result = new Map();
-    
-    data.forEach(w => {
-        if (result.has(w))
-            result.set(w,result.get(w)+1);
-        else
-            result.set(w,1);
-    });
-    let arrResult = Array.from(result).sort();
-    arrResult.forEach(x => console.log(`'${x[0]}'` + ' -> ' + x[1] + ' times'))
+
+    for (let word of words) {
+        if (!result.has(word))
+            result.set(word,0);
+        let current = result.get(word);
+        result.set(word, ++current);
+    }
+
+    let sortedResult = [...result].sort();
+    sortedResult.forEach((kvp) => console.log(`'${kvp[0]}' -> ${kvp[1]} times`));
 }
 
-solve([`Far too slow, you're far too slow.`]);
-//solve([`JS devs use Node.js for server-side JS.-- JS for devs`]);
+solve([`JS devs use Node.js for server-side JS.-- JS for devs`]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

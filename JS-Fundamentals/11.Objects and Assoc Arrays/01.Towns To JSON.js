@@ -2,7 +2,7 @@ function solve(input) {
     let result = [];
 
     for (let i = 1; i < input.length; i++) {
-        let data = input[i].split(/[\s\|]+/).filter(x => x !== '');
+        let data = input[i].split(/[|]+/).filter(x => x !== '').map(x => x.trim());
         let obj = {};
         obj['Town'] = data[0];
         obj['Latitude'] = Number(data[1]);

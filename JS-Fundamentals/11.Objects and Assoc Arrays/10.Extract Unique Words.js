@@ -7,7 +7,7 @@ function solve(input) {
         }
     }
 
-    console.log(Array.from(result).join(', '));
+    console.log([...result].join(', '));
 }
 
 solve([`Far too slow, you're far too slow.`]);

@@ -1,5 +1,5 @@
 function solve(input) {
-    let regex = /\b([0-9]{1,2})-([a-zA-Z]{3})-([0-9]{4})\b/g;
+    let regex = /\b([0-9]{1,2})-([A-Z][a-z]{2})-([0-9]{4})\b/g;
     let dates = [];
     let match = '';
 

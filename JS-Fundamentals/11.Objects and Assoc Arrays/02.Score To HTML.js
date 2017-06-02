@@ -1,5 +1,5 @@
 function solve(input) {
-    let data = JSON.parse(input[0]);
+    let data = JSON.parse(input);
     let html = '<table>\n';
     html += '  <tr><th>name</th><th>score</th></tr>\n';
     for (let i = 0; i < data.length; i++) {
@@ -23,4 +23,4 @@ function solve(input) {
     }
 }
 
-solve(['[{"name":"Pesho","score":479},{"name":"Gosho","score":205}]']);
+solve('[{"name":"Pesho","score":479},{"name":"Gosho","score":205}]');

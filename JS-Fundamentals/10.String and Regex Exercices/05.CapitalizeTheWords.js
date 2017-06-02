@@ -1,10 +1,6 @@
 function main(input) {
-    let arr = input[0].split(' ');
-    arr = arr.map(word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase());
-
-    console.log(arr.join(' '));
+    let result = input.split(' ').map(x => x[0] = x[0].toUpperCase() + x.substring(1).toLowerCase());
+    console.log(result.join(' '));
 }
 
-main([
-    'Was that Easy? tRY thIs onE for SiZe!'
-]);
+main('Was that Easy? tRY thIs onE for SiZe!');

@@ -1,5 +1,5 @@
-function solve([email]) {
-    let regex = /^[a-z0-9]+@[a-z]+\.[a-z]+$/;
+function solve(email) {
+    let regex = /^[A-Za-z0-9]+@[a-z]+\.[a-z]+$/;
     if (regex.test(email))
         console.log('Valid');
     else

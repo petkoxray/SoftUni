@@ -1,18 +1,11 @@
-function main([str, substr]) {
-    let realSubstr = str.substr(0,substr.length);
-    if (realSubstr === substr) {
+function main(str, substr) {
+    if (str.startsWith(substr))
         console.log(true);
-    } else {
+    else
         console.log(false);
-    }
 }
 
-main([
-    'How have you been?',
-    'how'
-]);
+main('How have you been?', 'how');
 
-main([
-    'Marketing Fundamentals, starting 19/10/2016',
-    'Marketing Fundamentals, sta'
-]);
+main('Marketing Fundamentals, starting 19/10/2016', 'Marketing Fundamentals, sta');
+

@@ -1,8 +1,8 @@
 function solve(input) {
-    let data = JSON.parse(input[0]);
+    let data = JSON.parse(input);
 
     let html = '<table>\n';
-    html += '  <tr>'
+    html += '  <tr>';
     for (let key in data[0]) {
         html += `<th>${key}</th>`
     }
@@ -34,4 +34,4 @@ function solve(input) {
     }
 }
 
-solve(['[{"Name":"Tomatoes & Chips","Price":2.35},{"Name":"J&B Chocolate","Price":0.96}]']);
+solve('[{"Name":"Tomatoes & Chips","Price":2.35},{"Name":"J&B Chocolate","Price":0.96}]');
