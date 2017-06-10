@@ -1,1 +1,1 @@
- SoftUni Homeworks and Exercices
+ SoftUni Homeworks and Exercises
