@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts Builder</title>
+    <style>
+        article { background: #EEE; padding: 1px; width: 250px; margin: 1px; }
+        .title { background: #DDD; padding: 5px; font-weight: bold; }
+        .title button { float: right }
+        .info { margin: 5px; }
+        .info span { display: block; }
+        .online { background: #9E9; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="main"></div>
+<script>
+    $(function () {
+        class Contact {
+            constructor(firstName, secondName, phone, email) {
+                this.firstName = firstName;
+                this.secondName = secondName;
+                this.phone = phone;
+                this.email = email;
+                this.online = false;
+                this.article = $('<article>');
+            }
+
+            set online(value) {
+                this._online = value;
+                if (this._online) {
+                    $(this.article).find('.title').addClass('online');
+                } else {
+                    $(this.article).find('.title').removeClass('online');
+                }
+            }
+
+            get online() {
+                return this._online;
+            }
+
+            render(id) {
+                let main = $(`#${id}`);
+                let divTitle = $('<div>').addClass('title').text(`${this.firstName} ${this.secondName}`);
+                let btn = $('<button>').html('&#8505').click(function () {
+                    $(this).parent().next().toggle();
+                });
+                let divInfo = $('<div>').addClass('info').css('display', 'none');
+                let phoneSpan = $('<span>').html(`&phone; ${this.phone}`);
+                let emailSpan = $('<span>').html(`>&#9993; ${this.email}`);
+
+                main.append(
+                    this.article.append(divTitle.append(btn))
+                        .append(divInfo.append(phoneSpan).append(emailSpan)));
+            }
+        }
+
+        let contacts = [
+            new Contact("Ivan", "Ivanov", "0888 123 456", "i.ivanov@gmail.com"),
+            new Contact("Maria", "Petrova", "0899 987 654", "mar4eto@abv.bg"),
+            new Contact("Jordan", "Kirov", "0988 456 789", "jordk@gmail.com")
+        ];
+        contacts.forEach(c => c.render('main'));
+        contacts[1].online = true;
+        contacts[2].online = true;
+        contacts[1].online = false;
+    });
+</script>
+</body>
+</html>
