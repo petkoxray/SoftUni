@@ -252,3 +252,8 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+typings/globals/jquery/typings.json
+typings/globals/jquery/index.d.ts
+typings/index.d.ts
+package-lock.json
+package.json
