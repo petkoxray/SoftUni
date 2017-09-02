@@ -1,0 +1,15 @@
+{{>header}}
+<section id="viewAppHome">
+    {{#if isAuth}}
+        <section id="viewUserHome">
+            <h1 id="viewUserHomeHeading">Welcome, {user}!</h1>
+            <a href="#/myMessages" id="linkUserHomeMyMessages">My Messages</a>
+            <a href="#/sendMessage" id="linkUserHomeSendMessage">Send Message</a>
+            <a href="#/archiveMessages" id="linkUserHomeArchiveSent">Archive (Sent)</a>
+        </section>
+    {{else}}
+        <h1>Welcome</h1>
+        Welcome to our messaging system.
+    {{/if}}
+</section>
+{{>footer}}
