@@ -1,30 +1,38 @@
 let messengerService = (() => {
     function getMyMessages(username) {
-        return requester.get('appdata', 'messages' + `?query={"recipient_username":"${username}"}`, 'kinvey');
-    }
-
-    function getUsers() {
-        return requester.get('user', '', 'kinvey');
-    }
-
-    function sendMessage(sender, receiver, text) {
-        let data = {
-            sender_username: sender,
-            recipient_username: receiver,
-            text: text
-        };
-
-        return requester.post('appdata', 'messages', 'kinvey', data);
+        let endpoint = `messages?query={"recipient_username":"${username}"}`;
+        return requester.get('appdata', endpoint , 'kinvey');
     }
 
     function getArchiveMessages(username) {
-        return requester.get('appdata', 'messages' + `?query={"sender_username":"${username}"}`, 'kinvey');
+        let endpoint = `messages?query={"sender_username":"${username}"}`;
+        return requester.get('appdata', endpoint, 'kinvey');
+    }
+
+    function getAllUsers() {
+        return requester.get('user', '', 'kinvey' );
+    }
+
+    function sendMessage(senderUsername, senderName, recepient, text) {
+        let message = {
+            sender_username: senderUsername,
+            sender_name: senderName,
+            recipient_username: recepient,
+            text: text
+        };
+
+        return requester.post('appdata', 'messages', 'kinvey', message);
+    }
+
+    function deleteMessage(id) {
+        return requester.remove('appdata', 'messages/' + id, 'kinvey');
     }
 
     return {
         getMyMessages,
-        getUsers,
+        getAllUsers,
         sendMessage,
-        getArchiveMessages
+        getArchiveMessages,
+        deleteMessage
     }
 })();
