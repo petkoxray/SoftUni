@@ -1,44 +1,22 @@
-function startApp() {
-    const app = Sammy('#app', function () {
-
+$(() => {
+    Sammy('#app', function () {
         this.use('Handlebars', 'hbs');
 
-        $(document).on({
-            ajaxStart: function () {
-                $("#loadingBox").show();
-            },
-            ajaxStop: function () {
-                $("#loadingBox").hide();
-            }
-        });
-
-        //Get home page/market page
+        //Home
         this.get('market.html', displayHome);
         this.get('#/home', displayHome);
 
-        function displayHome(ctx) {
-            ctx.isAnonymous = sessionStorage.getItem('username') === null;
-            ctx.username = sessionStorage.getItem('username');
-            ctx.loadPartials({
-                header: "./templates/common/header.hbs",
-                footer: "./templates/common/footer.hbs"
-            }).then(function () {
-               this.partial("./templates/home/homePage.hbs")
-            });
-        }
-
-        //Login Page
+        //Login and logout Page
         this.get('#/login', function (ctx) {
-            ctx.isAnonymous = sessionStorage.getItem('username') === null;
+            ctx.isAuth = sessionStorage.getItem('username') !== null;
             ctx.username = sessionStorage.getItem('username');
             ctx.loadPartials({
-                header: "./templates/common/header.hbs",
-                footer: "./templates/common/footer.hbs"
+                header: "./templates/partials/header.hbs",
+                footer: "./templates/partials/footer.hbs"
             }).then(function () {
                 this.partial("./templates/login/loginPage.hbs")
             });
         });
-
         this.post('#/login', function (ctx) {
             let username = ctx.params.username;
             let password = ctx.params.password;
@@ -48,27 +26,25 @@ function startApp() {
                 ctx.redirect('#/home');
             }).catch(auth.handleError);
         });
-
         this.get('#/logout', function (ctx) {
-           auth.logout().then(function (info) {
-               sessionStorage.clear();
-               auth.showInfo('Logout successful');
-               ctx.redirect('#/home');
-           }).catch(auth.handleError);
+            auth.logout().then(function (info) {
+                sessionStorage.clear();
+                auth.showInfo('Logout successful');
+                ctx.redirect('#/home');
+            }).catch(auth.handleError);
         });
 
         //Register Page
         this.get('#/register', function (ctx) {
-            ctx.isAnonymous = sessionStorage.getItem('username') === null;
+            ctx.isAuth = sessionStorage.getItem('username') !== null;
             ctx.username = sessionStorage.getItem('username');
             ctx.loadPartials({
-                header: "./templates/common/header.hbs",
-                footer: "./templates/common/footer.hbs"
+                header: "./templates/partials/header.hbs",
+                footer: "./templates/partials/footer.hbs"
             }).then(function () {
                 this.partial("./templates/register/registerPage.hbs")
             });
         });
-
         this.post('#/register', function (ctx) {
             let username = ctx.params.username;
             let password = ctx.params.password;
@@ -83,98 +59,109 @@ function startApp() {
 
         //Shop page
         this.get('#/shop', function (ctx) {
-            ctx.isAnonymous = sessionStorage.getItem('username') === null;
+            ctx.isAuth = sessionStorage.getItem('username') !== null;
             ctx.username = sessionStorage.getItem('username');
 
-            marketService.getProducts().then(function (products) {
-                for (let prd of products) {
-                    prd['price'] = Number(prd['price']).toFixed(2);
-                }
-
+            service.getAllProducts().then((products) => {
+                products.forEach((p) => {
+                    p.price = Number(p.price).toFixed(2);
+                });
                 ctx.products = products;
+
                 ctx.loadPartials({
-                    header: "./templates/common/header.hbs",
-                    footer: "./templates/common/footer.hbs",
-                    product: "./templates/shop/product.hbs"
+                    header: './templates/partials/header.hbs',
+                    footer: './templates/partials/footer.hbs',
+                    product: './templates/shop/product.hbs',
                 }).then(function () {
-                    this.partial("./templates/shop/shopPage.hbs").then(() => {
+                    this.partial('./templates/shop/shopPage.hbs').then(() => {
                         $('button').click(purchaseProduct);
                     });
-                });
-            }).then(auth.handleError);
 
-            function purchaseProduct() {
-                let id = $(this).attr('data-id');
-                marketService.getProduct(id).then((product) => {
-                    marketService.getUser().then((userInfo) => {
-                        if (userInfo['cart'] === undefined) {
-                            userInfo['cart'] = {};
-                        }
-
-                        if (userInfo['cart'].hasOwnProperty(id)) {
-                            ++userInfo['cart'][id]['quantity'];
-                        } else {
-                            userInfo['cart'][id] = {
-                                quantity: 1,
-                                product: {
-                                    name: product.name,
-                                    description: product.description,
-                                    price: product.price
-                                }
+                    function purchaseProduct() {
+                        let productId = $(this).attr('data-id');
+                        let userId = sessionStorage.getItem('id');
+                        let productPromise = service.getProductById(productId);
+                        let userPromise = service.getUser(userId);
+                        Promise.all([productPromise, userPromise]).then(([product, user]) => {
+                            if (!user['cart']) {
+                                user['cart'] = {};
                             }
-                        }
-
-                        marketService.updateUser(userInfo).then(() => {
-                            auth.showInfo('Product added to the cart!')
-                        });
-                    });
-                });
-            }
-        });
-
-        //Cart Page
-        this.get('#/cart', displayCart);
-
-        function displayCart(ctx) {
-            ctx.isAnonymous = sessionStorage.getItem('username') === null;
-            ctx.username = sessionStorage.getItem('username');
-
-            marketService.getUser().then((userInfo) => {
-                let cart = userInfo.cart;
-                let cartProducts = [];
-                for (let id in cart) {
-                    let current = {};
-                    current['_id'] = id;
-                    current['quantity'] = cart[id]['quantity'];
-                    current['name'] = cart[id]['product']['name'];
-                    current['description'] = cart[id]['product']['description'];
-                    current['totalPrice'] = (cart[id]['product']['price'] * cart[id]['quantity']).toFixed(2);
-
-                    cartProducts.push(current);
-                }
-
-                ctx.cartProducts = cartProducts;
-                ctx.loadPartials({
-                    header: "./templates/common/header.hbs",
-                    footer: "./templates/common/footer.hbs",
-                    cartProduct: "./templates/cart/cartProduct.hbs"
-                }).then(function () {
-                    this.partial("./templates/cart/cartPage.hbs").then(() => {
-                        $('button').click(function () {
-                            let id = $(this).attr('data-id');
-                            --userInfo['cart'][id]['quantity'];
-                            if (Number(userInfo['cart'][id]['quantity']) <= 0) {
-                                delete userInfo['cart'][id];
+                            if (!user['cart'][productId]) {
+                                user['cart'][productId] = {};
+                                user['cart'][productId]['quantity'] = 0;
+                                user['cart'][productId]['product'] = {};
+                                user['cart'][productId]['product']['name'] = product['name'];
+                                user['cart'][productId]['product']['price'] = product['price'];
+                                user['cart'][productId]['product']['description'] = product['description'];
                             }
-                            marketService.updateUser(userInfo).then(() => {
-                                displayCart(ctx);
+
+                            ++user['cart'][productId]['quantity'];
+                            service.updateCart(userId, user).then(() => {
+                                auth.showInfo('Product purchased');
+                                ctx.redirect('#/cart');
                             });
                         });
+                    }
+
+                });
+            }).catch(auth.handleError);
+        });
+
+        //Cart page
+        this.get('#/cart', displayProduct);
+
+        function displayProduct(ctx) {
+            ctx.isAuth = sessionStorage.getItem('username') !== null;
+            ctx.username = sessionStorage.getItem('username');
+
+            service.getUser(sessionStorage.getItem('id')).then((user) => {
+                let cart = [];
+                for (let p in user.cart) {
+                    let product = {};
+                    product['name'] = user.cart[p]['product']['name'];
+                    product['description'] = user.cart[p]['product']['description'];
+                    product['quantity'] = user.cart[p]['quantity'];
+                    product['totalPrice'] = user.cart[p]['quantity'] * user.cart[p]['product']['price'];
+                    product['_id'] = p;
+                    cart.push(product);
+                }
+                ctx.cartProducts = cart;
+
+                ctx.loadPartials({
+                    header: './templates/partials/header.hbs',
+                    footer: './templates/partials/footer.hbs',
+                    cartProduct: './templates/cart/cartProduct.hbs',
+                }).then(function () {
+                    this.partial('./templates/cart/cartPage.hbs').then(() => {
+                        $('button').click(discardProduct);
                     });
                 });
+
+                function discardProduct() {
+                    let productId = $(this).attr('data-id');
+                    user.cart[productId]['quantity']--;
+                    if (user.cart[productId]['quantity'] === 0) {
+                        delete user.cart[productId];
+                    }
+                    service.updateCart(user._id, user).then(() => {
+                        ctx.render(displayProduct(ctx));
+                    });
+                }
             });
         }
-    });
 
-    app.run();
-}
+        function displayHome(ctx) {
+            ctx.isAuth = sessionStorage.getItem('username') !== null;
+            ctx.username = sessionStorage.getItem('username');
+
+            ctx.loadPartials({
+                header: './templates/partials/header.hbs',
+                footer: './templates/partials/footer.hbs',
+            }).then(function () {
+                this.partial('./templates/home/homePage.hbs')
+            });
+        }
+
+
+    }).run();
+});

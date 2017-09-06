@@ -1,14 +1,16 @@
 {{>header}}
-{{#if isAnonymous}}
-    <section id="viewAppHome">
-        <h1>Welcome</h1>
-        Welcome to our shopping system.
-    </section>
-{{else}}
-    <section id="viewUserHome">
-        <h1 id="viewUserHomeHeading">Welcome, {{username}}!</h1>
-        <a href="#/shop" id="linkUserHomeShop">Shop</a>
-        <a href="#/cart" id="linkUserHomeCart">Cart</a>
-    </section>
-{{/if}}
+<section id="viewAppHome">
+    {{#if isAuth}}
+        <section id="viewUserHome">
+            <h1 id="viewUserHomeHeading">Welcome, {{username}}!</h1>
+            <a href="#/shop" id="linkUserHomeShop">Shop</a>
+            <a href="#/cart" id="linkUserHomeCart">Cart</a>
+        </section>
+    {{else}}
+        <section id="viewAppHome">
+            <h1>Welcome</h1>
+            Welcome to our shopping system.
+        </section>
+    {{/if}}
+</section>
 {{>footer}}

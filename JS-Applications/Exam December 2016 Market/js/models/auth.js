@@ -42,6 +42,16 @@ let auth = (() => {
         sessionStorage.setItem('authtoken', authtoken);
     }
 
+
+    $(document).on({
+        ajaxStart: function () {
+            $("#loadingBox").show();
+        },
+        ajaxStop: function () {
+            $("#loadingBox").hide();
+        }
+    });
+
     function showInfo(message) {
         let infoBox = $('#infoBox');
         infoBox.text(message);
