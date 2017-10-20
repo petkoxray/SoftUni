@@ -52,5 +52,6 @@ class Child extends Person
 
 $person = new Person('Gosho', 10);
 $child = new Child('Petiufi', 15);
+
 var_dump($person);
 var_dump($child);
