@@ -22,7 +22,7 @@ class Playlist
         ];
     }
 
-    public function totalSongs()
+    public function totalSongs(): int
     {
         return count($this->songs);
     }
