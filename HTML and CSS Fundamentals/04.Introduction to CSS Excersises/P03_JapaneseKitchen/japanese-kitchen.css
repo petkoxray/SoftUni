@@ -1,0 +1,123 @@
+@import url('https://fonts.google.com/selection?selection.family=Lato');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url('images/dark-wood.jpg');
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    width: 980px;
+    margin: auto;
+}
+
+header {
+    background: url('images/header-page.jpg');
+    background-size: cover;
+    width: 980px;
+    height: 130px;
+}
+
+header h1 {
+    text-align: right;
+    padding-top: 50px;
+    padding-right: 10px;
+}
+
+nav ul {
+    border-bottom: 2px solid;
+    background: url('images/header-page.jpg');
+    margin: 2px 0;
+    padding: 2px 0;
+}
+
+nav ul li {
+    padding: 0 20px;
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:first-of-type a {
+    color: black;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+main {
+    background: white;
+    display: inline-block;
+}
+
+main section.courses {
+    width: 70%;
+    border-right: 1px solid gainsboro;
+    float: left;
+    margin: 10px 0;
+}
+
+section.courses article {
+    display: inline-block;
+}
+
+section.courses article figure {
+    float: left;
+    border: 1px solid gainsboro;
+    margin: 20px;
+    padding: 5px;
+}
+
+section.courses div {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+section.courses div h2 {
+    color: gray;
+}
+
+section.courses div h3 {
+    color: rgb(179, 157, 35);
+}
+
+section.courses p {
+    display: block;
+}
+
+aside {
+    width: 27%;
+    float: right;
+}
+
+.popular-recipes {
+    padding-top: 30px;
+    width: 60%;
+    color: rgba(255, 0, 0, 0.7)
+}
+
+.popular-recipes ul li {
+    list-style-type: none;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.popular-recipes ul li a {
+    text-decoration: none;
+    color: rgba(255, 0, 0, 0.7)
+}
+
+footer {
+    color: white;
+    background: url('images/header-page.jpg');
+    background-position-x: center;
+    background-size: cover;
+    height: 20px;
+    text-align: center;
+}
