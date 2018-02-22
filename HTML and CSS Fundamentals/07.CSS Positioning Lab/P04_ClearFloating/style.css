@@ -1,0 +1,33 @@
+header, footer {
+    background: #896439;
+    color: #fff;
+    border: 2px solid black;
+}
+
+header h1 {
+    padding: 25px;
+    font-size: 36px;
+}
+
+aside {
+    float: left;
+}
+
+aside li {
+    list-style-type: none;
+    margin: 10px;
+    margin-left: 0px;
+    padding: 10px 70px 10px 10px;
+    border: 0px solid;
+    background: skyblue;
+}
+
+article p {
+    font-size: 25px;
+}
+
+
+footer p {
+    font-size: 20px;
+    padding: 20px;
+}

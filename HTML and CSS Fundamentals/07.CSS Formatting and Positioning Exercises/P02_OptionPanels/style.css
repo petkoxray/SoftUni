@@ -1,0 +1,61 @@
+body {
+    width: 1000px;
+    margin: auto;
+    background: gainsboro;
+    font-size: 15px;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #191923;
+}
+
+header {
+    background: white;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 40px 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header ul li:first-of-type a {
+    color: red;
+    text-transform: capitalize;
+}
+
+header ul li a:hover {
+    color: red;
+}
+
+article {
+    display: inline-block;
+    width: 24%;
+    background: white;
+    vertical-align: top;
+    height: 280px;
+    margin-right: 9px;
+}
+
+article:last-of-type {
+    margin-right: 0px;
+}
+
+article img {
+    width: 100%;
+    max-height: 160px;
+}
+
+article h3 {
+    text-transform: uppercase;
+}
+
+article h3, article p {
+    margin: 10px 15px;
+}
+
+article:hover {
+    opacity: 0.8;
+}

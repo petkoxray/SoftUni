@@ -1,0 +1,33 @@
+p {
+    font-size: 36px;
+}
+
+.left {
+    float: left;
+    background: blue;
+    color: black;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 25px 65px;
+}
+
+.right {
+    float: right;
+    background: blue;
+    color: black;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 20px 60px;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    width: 100px;
+    margin: 0 auto;
+    background: blue;
+    color: black;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 20px 60px;
+}

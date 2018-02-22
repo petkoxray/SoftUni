@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+body {
+    font-family: 'OpenSans-ExtraBold', Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    background: #f1f1e9;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: green;
+    font-weight: bolder;
+    font-size: 56px;
+}
+
+main section {
+    width: 75%;
+    margin: 50px auto;
+}
+
+article {
+    display: inline-block;
+    max-width: 220px;
+    font-weight: normal;
+    text-align: center;
+    margin: 13px;
+}
+
+article:hover {
+    border-left: 10px solid green;
+    background: white;
+}
