@@ -209,3 +209,72 @@ article.consultant h3 {
     height: 50px;
     width: 90px;
 }
+
+footer {
+    height: 180px;
+    background: rgb(20, 0, 38);
+}
+
+footer .container {
+    width: 80%;
+    margin: auto;
+}
+
+.consulting {
+    display: inline-block;
+    width: 20%;
+    margin-right: 180px;
+    margin-left: 50px;
+}
+
+footer h2 {
+    padding: 10px 0;
+}
+
+.consulting p {
+    margin:5px 20px;
+}
+
+.consulting p i {
+    font-size: 10px;
+    margin-right: 3px;
+}
+
+.consulting ul {
+    margin: 10px 30px;
+}
+
+.consulting ul li {
+    display: inline-block;
+    margin: 0 7px;
+}
+
+.consulting ul i {
+    background: silver;
+    border: none;
+    padding: 8px;
+    border-radius: 100px;
+    color: rgb(20, 0, 38);
+}
+
+.extra-links {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    margin-right: 100px;
+}
+
+.instagram-widget {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    padding-right: 80px;
+}
+
+.instagram-widget h2 {
+    margin-left: -15px;
+}
+
+.instagram-widget img {
+    height: 65px;
+}

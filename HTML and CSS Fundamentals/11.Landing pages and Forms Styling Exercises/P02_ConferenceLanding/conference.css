@@ -1,0 +1,152 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+header {
+    background: 
+    linear-gradient(
+      rgba(12, 9, 9, 0.45), 
+      rgba(19, 19, 34, 0.45)
+    ),
+    url('img/header-bg.png');
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    padding: 20px 20px 0 20px;
+}
+
+header nav {
+    float: right;
+}
+
+header span {
+    font-weight: bolder;
+    float: left;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+header ul a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header h1 {
+    text-align: left;
+    width: 45%;
+    font-size: 26px;
+    margin: auto;
+    margin-top: 215px;
+}
+
+header i.header {
+    position: relative;
+    left:  350px;
+    bottom: 50px;
+}
+
+header article {
+    font-size: 14px;
+    width: 23%;
+    display: inline-block;
+    height: 285px;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 10px solid transparent;
+}
+
+header article:hover {
+    border-bottom: 10px solid orange;
+}
+
+header article i {
+    margin-bottom: 40px;
+}
+
+main section.first {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+main section.first article {
+    margin: 80px 40px;
+    vertical-align: top;
+    display: inline-block;
+    width: 25%;
+}
+
+section.first article.quote {
+    text-align: right;
+}
+
+section.first article.quote h2 {
+    padding: 45px 0;
+}
+
+section.first article.quote p {
+    padding: 45px 0;
+    text-transform: capitalize;
+}
+
+
+section.first article.content p {
+    text-align: left;
+    padding-bottom: 30px;
+    border-bottom: 2px solid black;
+}
+
+section.first article.content h2 {
+    text-align: left;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+section.schedule {
+    background: rgb(66, 68, 80);
+    color: white;
+    text-align: center;
+}
+
+section.schedule h2 {
+    font-size: 18px;
+    width: 24%;
+    text-align: left;
+    padding:40px;
+}
+
+section.schedule i {
+    color: orange;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+section.schedule span {
+    font-weight: bolder;
+}
+
+section.schedule article {
+    text-align: left;
+    display: inline-block;
+    margin: 40px;
+    width: 40%;
+}
