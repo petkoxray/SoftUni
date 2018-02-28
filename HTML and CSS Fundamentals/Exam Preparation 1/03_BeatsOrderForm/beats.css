@@ -1,0 +1,92 @@
+body {
+    background: rgb(23, 55, 64);
+}
+
+main {
+    background: whitesmoke;
+    width: 70%;
+    height: 600px;
+    margin: 50px auto;
+    border-radius: 10px;
+    display: flex;
+}
+
+main section.img {
+    width: 33%;
+    display: inline-block;
+}
+
+main>section.img>img {
+    position: relative;
+    bottom: 10px;
+    width: auto;
+}
+
+main section.content {
+    width: 60%;
+}
+
+main>section.content>header {
+    color: darkgrey;
+    text-align: right;
+}
+
+main>section.content>header>h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    width: 95%;
+    margin-top: 50px;
+}
+
+main>section.content header>p {
+    width: 95%;
+    font-size: 40px;
+    margin-top: 0;
+    color: grey;
+    font-weight: bold;
+}
+
+main> section.content form {
+    display: flex;
+    margin-left: 15px;
+    flex-wrap: wrap;
+}
+
+form input {
+    border: none;
+    padding-right: 10px;
+    padding-left: 50px;
+    border-bottom: 1px solid black;
+    background: whitesmoke;
+    margin: 10px;
+}
+
+form i.fa {
+    position: relative;
+    font-size: 22px;
+    left: 30px;
+}
+
+main section.content form div:first-of-type {
+    margin-right: 100px;
+}
+
+form div.button {
+    margin-top: 50px;
+    margin-left: auto;
+}
+
+form div.button button {
+    background: rgb(23, 55, 64);
+    padding: 15px;
+    color: white;
+    border: transparent;
+    text-transform: uppercase;
+    border-radius: 50px
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

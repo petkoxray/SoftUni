@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato, 'sans-serif';
+}
+
+header {
+    background-image: linear-gradient( rgba(76, 78, 80, 0.6) -26.48%, rgba(35, 36, 37, 0.6) 73.52%), url('images/background.jpg');
+    background-size: cover;
+    padding: 20px 100px 20px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+}
+
+header div.header-info {
+    text-align: center;
+    color: white;
+    margin: 200px auto 295px;
+}
+
+div.header-info h1 {
+    font-size: 55px;
+    font-weight: 400;
+}
+
+section.offers {
+    background: whitesmoke;
+    padding: 40px 0;
+    width: 100%;
+}
+
+section.offers div.info-offers {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+div.info-offers h2 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+div.info-offers p {
+    font-size: 16px;
+    color: gray;
+}
+
+
+section.offers section.all-offers {
+    width: 85%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+section.all-offers article {
+    width: 30%;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 10px;
+}
+
+section.all-offers img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+section.all-offers article p {
+    display: inline-block;
+    padding: 15px;
+}
+
+section.all-offers article p:first-of-type {
+    float: left;
+}
+
+section.all-offers article p:last-of-type {
+    float: right;
+}
+
+section.customers {
+    background: white;
+    padding: 45px 0;
+    width: 100%;
+}
+
+section.customers div.info-customers {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+section.customers section.customers-review {
+    display: flex;
+    text-align: center;
+    width: 92%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+section.customers section.customers-review article {
+    width: 32%;
+    font-size: 14px;
+}
+
+section.customers section.customers-review article img {
+    border: 20px solid ghostwhite;
+    border-radius: 100px;
+}
+
+section.customers section.customers-review article h3 {
+    padding: 13px 0;
+}
+
+footer {
+    margin: 0 60px 0 50px;
+}
+
+footer nav {
+    float: right;
+}
+
+footer p {
+    display: inline-block;
+}
+
+footer nav ul li {
+    display: inline-block;
+}

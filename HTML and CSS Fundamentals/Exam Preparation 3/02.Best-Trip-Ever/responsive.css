@@ -1,0 +1,47 @@
+@media all and (max-width: 481px) {
+    .travel-title-container {
+        width: 100%;
+    }
+
+    .top-button {
+        display: none;
+    }
+
+    .header-wrapper {
+        text-align: center;
+        background: black;
+    }
+
+    .header-subtitle {
+        display: none;
+    }
+
+    .header-title {
+        font-size: 2.2rem;
+    }
+
+    .introduction-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .travel-title {
+        font-size: 2.2rem;
+    }
+
+    .travel-subtitle {
+        font-size: 1.0rem;
+    }
+
+    .footer-wrapper {
+        text-align: center;
+    }
+
+    .footer-list {
+        float: none;
+        margin-top: 10px;
+    }
+}

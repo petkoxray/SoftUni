@@ -1,0 +1,42 @@
+@media all and (max-width: 640px) {
+    .nav-primary {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-primary li {
+        margin: 10px;
+    }
+
+    .nav-item a {
+        margin-right: 0;
+    }
+    .solo {
+        text-align: center;
+    }
+    .second-row {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .mixr-left,
+    .urbeats-right {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .studio {
+        text-align: center;
+    }
+
+    .grid-gallery {
+        width: 100%;
+    }
+
+    .grid-gallery img {
+        width: 49%;
+        display: inline-block;
+    }
+}
