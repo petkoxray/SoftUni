@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+    text-align: center;
+    font-family: Lato, sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 30px;
+    margin: 30px 0 60px 0;
+}
+
+section {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+section article {
+    width: 30%;
+    text-align: left;
+}
+
+section article h3 {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+section ul {
+    padding: 0;
+}
+
+section article ul li {
+    display: inline-block;
+    list-style: circle;
+    color: gray;
+}
+
+ul li:before {
+    content: "• ";
+    color: gray;
+}
+
+ul li:first-of-type::before {
+    content: none;
+}
+
+section article p {
+    color: gray;
+    font-weight: bolder;
+    font-size: 0.8rem;
+}
+
+section article p span {
+    color: dodgerblue;
+    font-size: 1.0rem;
+}

@@ -1,0 +1,54 @@
+@media all and (max-width: 480px) {
+    .menu ul {
+        display: none;
+    }
+    .menu span {
+        margin-left: 60px;
+        position: relative;
+        top: 25px;
+    }
+    .about-us {
+        padding-left: 0;
+        padding-top: 50px;
+    }
+    .about-us p {
+        display: inline;
+    }
+    .headings {
+        width: 91%;
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+    .paragraph {
+        width: 81%;
+    }
+    .views {
+        flex-direction: column;
+    }
+    #second-heading {
+        font-size: 1.3rem;
+        margin-top: 560px;
+        width: 94%;
+    }
+    .why-us {
+        flex-direction: column;
+        align-items: center;
+    }
+    .why-us article {
+        width: 100%;
+    }
+    .text-container p {
+        font-size: 0.85rem;
+    }
+
+    .headings:last-of-type {
+        margin-top: 20px;
+        font-size: 1.3rem;
+        width: 98%;
+    }
+
+    .our-team {
+        flex-direction: column;
+        align-items: center;
+    }
+}

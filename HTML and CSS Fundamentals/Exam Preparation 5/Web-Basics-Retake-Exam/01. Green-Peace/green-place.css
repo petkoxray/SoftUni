@@ -1,0 +1,35 @@
+body {
+    background: gainsboro;
+}
+
+section.articles {
+    width: 90%;
+    margin: 100px auto;
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+}
+
+article {
+    background: white;
+    width: 22.1%;
+    padding-bottom: 20px;
+    font-style: italic;
+}
+
+article img {
+    width: 100%;
+}
+
+hr {
+    width: 90%;
+    background: orange;
+    border: 1px solid orange;
+}
+
+article a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: orange;
+    font-style: normal;
+}

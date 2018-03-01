@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+
+body {
+    background: rgb(244, 252, 255);
+}
+
+section.form {
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+section.form h1 {
+    display: inline-block;
+    font-size: 48px;
+    font-family: 'Francois One', sansserif;
+    font-weight: bolder;
+    border-bottom: 5px solid greenyellow;
+}
+
+form {
+    margin: auto;
+    width: 40%;
+    font-family: 'Source Sans Pro';
+}
+
+form div {
+    text-align: left;
+}
+
+form div i {
+    position: relative;
+    left: 30px;
+}
+
+form div p {
+    margin-bottom: 3px;
+}
+form div.not-required p {
+    padding-left: 20px;
+}
+
+form div.required p::before {
+    content: '* ';
+    padding-left: 10px;
+    color: red;
+}
+
+form div i::after {
+    content: " |";
+    color: rgb(244, 252, 255);
+}
+
+form input {
+    border: 1px solid rgb(193, 235, 250);
+    padding: 6px 0 6px 25px;
+    border-radius: 2px;
+    width: 80%;
+}
+
+form div.button {
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+div.button button {
+    background: greenyellow;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
