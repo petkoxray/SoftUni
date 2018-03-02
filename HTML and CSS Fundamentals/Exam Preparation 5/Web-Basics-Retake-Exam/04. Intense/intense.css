@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background: url('images/bg-01-1920x908.jpg');
+    background-size: cover;
+    padding: 20px;
+}
+
+header button.nav {
+    float: right;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+header img {
+    margin-left: 20px;
+}
+
+header div.content {
+    text-align: center;
+    margin: 160px auto;
+    color: white;
+}
+
+header div.content h1 {
+    letter-spacing: 1.2rem;
+    margin-bottom: 100px;
+}
+
+header div.content p {
+    width: 70%;
+    margin: 25px auto;
+}
+
+header div.content button.buy {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+header div.content button.watch {
+    background: none;
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-left: 15px;
+}
+
+footer {
+    background: black;
+    padding: 50px;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer article.contact {
+    color: white;
+    margin-top: 20px;
+    width: 20%;
+}
+
+footer article.contact p {
+    color: silver;
+    font-style: italic;
+}
+
+footer article.say {
+    color: white;
+    float: right;
+    width: 55%;
+}
+
+footer article.say span {
+    color: silver;
+    font-style: italic;
+}

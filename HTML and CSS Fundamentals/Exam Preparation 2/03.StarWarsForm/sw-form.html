@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Star Wars Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>may the force be with you</h1>
+        <h2>Thanks for pre-ordering!</h2>
+    </header>
+    <main>
+        <form action="">
+            <div class="pay">
+                <div class="paypal">
+                    <input type="radio" name="paying" value="paypal">
+                    <span>Pay Pal</span>
+                    <img src="images/PayPal.png" alt="">
+                </div>
+                <div class="debit">
+                    <input type="radio" name="paying" value="card">
+                    <span>Credit/Debit Card</span>
+                    <img src="images/MasterCard.png" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <span>Card Number:</span>
+                <input type="number" placeholder="4111 1111 1111 1111">
+            </div>
+            <div class="info">
+                <div class="expire">
+                    <span>Expiry</span>
+                    <input type="text" placeholder="MM/YY">
+                </div>
+                <div class="csv">
+                    <span>CSV</span>
+                    <input type="text" placeholder="123">
+                </div>
+
+            </div>
+            <div class="finish">
+                <a href="">Finish and Pay</a>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

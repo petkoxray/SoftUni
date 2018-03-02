@@ -1,0 +1,32 @@
+@media all and (max-width: 1024px) {
+    header {
+        min-height: 500px;
+    }
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 480px) {
+    h1 {
+        padding: 25px;
+        font-size: 2em;
+    }
+
+    header {
+        background-size: contain;
+        min-height: 260px;
+    }
+}
