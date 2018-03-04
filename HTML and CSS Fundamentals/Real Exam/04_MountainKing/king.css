@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato, sans-serif;
+}
+
+header {
+    background-image: url('img/background-header.jpg');
+    background-size: cover;
+    padding-bottom: 80px;
+}
+
+header img {
+    height: 50px;
+    padding: 20px;
+}
+
+header div {
+    text-align: center;
+    margin: 100px 0;
+}
+
+header div h2 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+header div h1 {
+    font-size: 55px;
+    margin-bottom: 50px;
+}
+
+header div p {
+    width: 60%;
+    margin: auto;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 30px;
+    text-shadow: 0.5px 0.5px 4px white;
+    color: rgb(36, 35, 35);
+}
+
+header div p:last-of-type {
+    margin-bottom: 50px;
+}
+
+header div a:first-of-type {
+    color: white;
+    background: rgb(57, 51, 104);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+header div a:last-of-type {
+    color: white;
+    background: red;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+main section.articles {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    padding: 55px 0;
+    justify-content: space-between;
+}
+
+main section.articles article {
+    width: 32%;
+}
+
+main section.articles i {
+    color: rgb(196, 133, 69);
+    font-size: 52px;
+    border: 2px solid rgb(196, 133, 69);
+    border-radius: 100px;
+    padding: 15px;
+}
+
+main section.articles i.fa-pencil {
+    padding: 15px 19px;
+}
+
+main section.articles i.fa-usd {
+    padding: 15px 26px;
+}
+
+main section.articles h2 {
+    margin: 20px 0;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+main section.articles p {
+    font-size: 0.9rem;
+}
+
+footer {
+    background: url('img/moon.jpg');
+    background-size: cover;
+    padding-left: 70px;
+    color: white;
+}
+
+footer div.content {
+    background: rgba(134, 133, 133, 0.3);
+    text-align: center;
+    width: 32%;
+    color: white;
+    border: 2px solid rgb(196, 133, 69);
+    background: rgb(255, 255, 255, 0.5);
+    padding-bottom: 130px;
+}
+
+footer div.content h2 {
+    margin: 55px 0px 30px 0px;
+    font-style: italic;
+}
+
+footer h5 {
+    font-style: italic;
+    margin-bottom: 38px;
+}
+
+footer p.info {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 95px;
+    font-size: 0.9rem;
+}
+
+footer div.content a {
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(243, 136, 136), yellow);
+    color: black;
+    padding: 37px 7px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+footer div.links {
+    padding: 45px 0;
+}
+
+footer p.softuni {
+    display: inline-block;
+}
+
+footer p>a {
+    text-transform: uppercase;
+    color: rgb(196, 133, 69);
+    text-decoration: none;
+}
+
+footer div.icons {
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    bottom: 20px;
+}
+
+footer div.icons i.fa-facebook {
+    color: blue;
+    font-size: 24px;
+    border: 1px solid blue;
+    border-radius: 30px;
+    padding: 10px 14px;
+}
+
+footer div.icons i.fa-twitter {
+    color: lightskyblue;
+    font-size: 24px;
+    border: 1px solid lightskyblue;
+    border-radius: 30px;
+    padding: 9px 10px;
+}
+
+footer div.icons i.fa-instagram {
+    color: purple;
+    font-size: 24px;
+    border: 1px solid purple;
+    border-radius: 30px;
+    padding: 9px 10px;
+}

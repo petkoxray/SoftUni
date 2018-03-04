@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+section.form {
+    width: 60%;
+    margin: 50px auto;
+    display: flex;
+    font-family: Lato, sans-serif;
+}
+
+section.form article {
+    width: 44%;
+    /* background: linear-gradient(transparent to top, rgba(264, 38, 146, 0.70), url('img/peak.jpg')); */
+    background: linear-gradient(to top, rgba(255, 181, 230, 0.7), transparent), url("img/peak.jpg"); 
+    height: 520px;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+section.form article h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 50px;
+    margin-bottom: 300px;
+}
+
+section.form article p {
+    font-size: 1.45rem;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+section.form article i {
+    font-size: 1.5rem;
+    color: gainsboro;
+}
+
+section.form form {
+    width: 50%;
+    text-align: center;
+    height: 517px;
+    border: 3px solid purple;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+section.form form div {
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+section.form form div:first-of-type {
+    margin-top: 100px;
+}
+
+section form i {
+    padding: 20px;
+    float: right;
+    color: purple;
+}
+
+form div input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+form div span {
+    color: gainsboro;
+}
+
+form div button {
+    background: purple;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+form div a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: purple;
+    font-size: 1.2rem;
+}
