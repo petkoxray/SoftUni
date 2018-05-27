@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/petkoxray/SoftUni#readme",
   "dependencies": {
+    "eslint": "^4.19.1",
     "handlebars": "^4.0.10",
     "jquery": "^3.2.1",
     "sammy": "^0.7.6"
